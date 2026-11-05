@@ -186,7 +186,7 @@
     }
     function start() {load();if(token){notify('waiting','Waiting to sync…');schedule(1000);}}
     function stop() {stopped=true;generation++;clearTimeout(timer);timer=null;}
-    return {start,stop,connect,disconnect,sync,schedule,getStatus:()=>({...status})};
+    return {start,stop,connect,disconnect,sync,schedule,getStatus:()=>({...status}),getKey:()=>token};
   }
   return {merge,project,validate,canonical,create,CONFIG,FORMAT};
 });
